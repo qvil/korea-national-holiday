@@ -4,10 +4,22 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
+import {
+  SamilMovement,
+} from 'components';
 
 function TabContainer(props) {
   return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
+    <Typography
+      component="div"
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        // alignItems: 'center',
+        padding: 8 * 3
+      }}
+      // align="center"
+    >
       {props.children}
     </Typography>
   );
@@ -50,22 +62,18 @@ class ScrollableTabs extends React.Component {
             scrollable
             scrollButtons="auto"
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
-            <Tab label="Item Four" />
-            <Tab label="Item Five" />
-            <Tab label="Item Six" />
-            <Tab label="Item Seven" />
+            <Tab label="삼일절" />
+            <Tab label="제헌절" />
+            <Tab label="광복절" />
+            <Tab label="개천절" />
+            <Tab label="한글날" />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One</TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
-        {value === 2 && <TabContainer>Item Three</TabContainer>}
-        {value === 3 && <TabContainer>Item Four</TabContainer>}
-        {value === 4 && <TabContainer>Item Five</TabContainer>}
-        {value === 5 && <TabContainer>Item Six</TabContainer>}
-        {value === 6 && <TabContainer>Item Seven</TabContainer>}
+        {value === 0 && <TabContainer><SamilMovement /></TabContainer>}
+        {value === 1 && <TabContainer>제헌절</TabContainer>}
+        {value === 2 && <TabContainer>광복절</TabContainer>}
+        {value === 3 && <TabContainer>개천절</TabContainer>}
+        {value === 4 && <TabContainer>한글날</TabContainer>}
       </div>
     );
   }
