@@ -16,10 +16,12 @@ class App extends Component {
   }
 
   render() {
+    const { today } = this;
+
     return (
       <Fragment>
-        <Header today={this.today} />
-        <ScrollableTabs />
+        <Header today={today} />
+        <ScrollableTabs today={today} />
       </Fragment>
     );
   }
