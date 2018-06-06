@@ -5,6 +5,7 @@ import AppBar from "material-ui/AppBar";
 import Tabs, { Tab } from "material-ui/Tabs";
 import Typography from "material-ui/Typography";
 import holidays from "../holidays";
+import { todayIsHoliday } from "lib";
 
 function TabContainer(props) {
   return (
@@ -40,21 +41,9 @@ class ScrollableTabs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: this._todayIsHoliday()
+      value: todayIsHoliday(this.props.today)
     };
   }
-
-  _todayIsHoliday = () => {
-    const { today } = this.props;
-
-    for (let index = 0; index < holidays.length; index++) {
-      const holiday = holidays[index];
-      if (holiday.date === today) {
-        return index;
-      }
-    }
-    return 0;
-  };
 
   handleChange = (event, value) => {
     this.setState({ value });
