@@ -12,7 +12,7 @@ injectGlobal`
 class App extends Component {
   get today() {
     const date = new Date();
-    return `${date.getDate()}-${date.getDate()}`;
+    return `${date.getMonth() + 1}-${date.getDate()}`;
   }
 
   render() {

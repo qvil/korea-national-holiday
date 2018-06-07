@@ -14,11 +14,12 @@ const Header = ({ today }) => {
   const month = today.split("-")[0];
   const day = today.split("-")[1];
   const holiday = holidays.filter(holiday => holiday.date === today);
+  const label = holiday.length > 0 ? holiday[0].label : "";
 
   return (
     <StyledHeader>
       {`오늘은 ${month}월 ${day}일 `}
-      <StyledSpan>{holiday[0].label}</StyledSpan>
+      <StyledSpan>{label}</StyledSpan>
       {`입니다. `}
       {/* 여기에 태극기 추가 */}
     </StyledHeader>
