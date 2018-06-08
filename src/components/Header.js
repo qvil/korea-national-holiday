@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import holidays from "../holidays";
+import { Flag } from "components";
 
 const StyledHeader = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px;
 `;
 
@@ -18,10 +22,12 @@ const Header = ({ today }) => {
 
   return (
     <StyledHeader>
-      {`오늘은 ${month}월 ${day}일 `}
-      <StyledSpan>{label}</StyledSpan>
-      {`입니다. `}
-      {/* 여기에 태극기 추가 */}
+      <div>
+        {`오늘은 ${month}월 ${day}일 `}
+        <StyledSpan>{label}</StyledSpan>
+        {`입니다. `}
+      </div>
+      <Flag />
     </StyledHeader>
   );
 };
