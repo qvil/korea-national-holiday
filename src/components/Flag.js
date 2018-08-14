@@ -19,6 +19,7 @@ const StyledFlag = styled.div`
   &:hover {
     margin-bottom: ${flagHeight * 2}px;
   }
+  margin-bottom: ${props => (props.up ? flagHeight * 2 : 0)}px;
 `;
 
 /**
@@ -45,11 +46,11 @@ const Container = styled.div`
   align-items: flex-end;
 `;
 
-const Flag = () => {
+const Flag = ({ up }) => {
   return (
     <Container>
       <FlagPole />
-      <StyledFlag />
+      <StyledFlag up={up} />
       {/* <EnhancedFlag /> */}
     </Container>
   );

@@ -18,7 +18,8 @@ const Header = ({ today }) => {
   const month = today.split("-")[0];
   const day = today.split("-")[1];
   const holiday = holidays.filter(holiday => holiday.date === today);
-  const label = holiday.length > 0 ? holiday[0].label : "";
+  const isHoliday = holiday.length > 0;
+  const label = isHoliday ? holiday[0].label : "";
 
   return (
     <StyledHeader>
@@ -27,7 +28,7 @@ const Header = ({ today }) => {
         <StyledSpan>{label}</StyledSpan>
         {`입니다. `}
       </div>
-      <Flag />
+      <Flag up={isHoliday} />
     </StyledHeader>
   );
 };
