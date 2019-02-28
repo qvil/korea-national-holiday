@@ -1,10 +1,8 @@
 # [Korea National Holiday](https://github.com/qvil/korea-national-holiday)
 
+Korea national holiday
+
 [대한민국의 5대 국경일](https://namu.wiki/w/%EA%B5%AD%EA%B2%BD%EC%9D%BC)
-
-## [Demo](https://qvil.github.io/korea-national-holiday/)
-
-![demo.png](demo.png)
 
 ## Install
 
@@ -12,10 +10,16 @@
 npm install
 ```
 
-## Start
+## Dev
 
 ```
-npm start
+npm run dev
+```
+
+## Build
+
+```
+npm run build
 ```
 
 ## Prerequisites
