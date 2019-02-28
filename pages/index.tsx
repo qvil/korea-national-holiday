@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-  background: #f00;
+  background: ${({
+    theme: {
+      color: { primary }
+    }
+  }) => primary};
 `;
 
 interface ITextProps {
@@ -21,11 +25,21 @@ const Text: React.FunctionComponent<ITextProps> = props => {
   );
 };
 
+const Button = styled.button`
+  background: ${props => props.theme.color.secondary};
+  background: ${({
+    theme: {
+      color: { secondary }
+    }
+  }) => secondary};
+`;
+
 const Home: React.FunctionComponent<IHomeProps> = props => {
   return (
     <Div>
       Home
       <Text text="Greetings!">Hi</Text>
+      <Button>Button</Button>
     </Div>
   );
 };
