@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Header from "../src/components/Header";
 
 const Div = styled.div`
   background: ${({
@@ -35,8 +36,11 @@ const Button = styled.button`
 `;
 
 const Home: React.FunctionComponent<IHomeProps> = props => {
+  const date = new Date();
+  const today = `${date.getMonth() + 1}-${date.getDate()}`;
   return (
     <Div>
+      <Header today={today} />
       Home
       <Text text="Greetings!">Hi</Text>
       <Button>Button</Button>
