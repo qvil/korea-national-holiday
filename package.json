@@ -1,23 +1,31 @@
 {
   "name": "korea-national-holiday",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://qvil.github.io/korea-national-holiday/",
-  "dependencies": {
-    "material-ui": "next",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "styled-components": "^3.3.2"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "react-scripts": "1.1.1"
-  },
+  "version": "1.0.0",
+  "description": "[대한민국의 5대 국경일](https://namu.wiki/w/%EA%B5%AD%EA%B2%BD%EC%9D%BC)",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "deploy": "npm run build&&gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qvil/korea-national-holiday.git"
+  },
+  "keywords": [
+    "korea",
+    "national-holiday"
+  ],
+  "author": "Taesu Hyeon <qvil1127@gmail.com> (https://github.com/qvil)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qvil/korea-national-holiday/issues"
+  },
+  "homepage": "https://github.com/qvil/korea-national-holiday#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   }
 }
